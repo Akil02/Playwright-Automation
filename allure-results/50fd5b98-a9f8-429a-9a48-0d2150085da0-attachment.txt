@@ -1,0 +1,2 @@
+To chec true, and true
+Chec---- locator('[class = \'range-slider__wrap\'] > input')

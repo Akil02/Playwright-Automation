@@ -1,0 +1,3 @@
+Count check : 6
+Locator and count : [class = 'react-datepicker__month'] > div:nth-child(1) > div and 7
+Coloumn locator : [class = 'react-datepicker__month'] > div:nth-child(1) > div:nth-child(1)

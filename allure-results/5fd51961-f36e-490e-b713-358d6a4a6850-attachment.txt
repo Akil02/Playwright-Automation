@@ -1,0 +1,2 @@
+Day value is : 5
+Count check : 42
