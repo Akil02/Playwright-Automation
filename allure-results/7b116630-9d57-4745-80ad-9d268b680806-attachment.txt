@@ -1,0 +1,10 @@
+Path ************************************* C:\Playwright-Automation
+Worksheet is present : Sheet2
+Table added
+visible : trueand is enabled? : true
+Path ************************************* C:\Playwright-Automation
+Worksheet is present : Sheet3
+The newly added table is in 4 row of the table
+Enable and 
+Api is success ***********!
+Downloaded file saved at: C:\Users\AAKILG~1\AppData\Local\Temp\playwright-artifacts-0i3JlZ\325a76ca-e459-4c4e-a207-594461d0479c

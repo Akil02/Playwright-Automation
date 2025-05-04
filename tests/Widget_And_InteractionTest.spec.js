@@ -8,10 +8,10 @@ test("Test case to check all functinality under Widget and interactions", async 
   await page.goto("/");
   const home = new HomePage(page);
   await home.Widget();
-  await home.Interaction();
   const Widget_Interaction = new Widget_InteractionPage(page);
   await Widget_Interaction.SliderButton();
   await Widget_Interaction.SliderCheck();
+  await home.Interaction();
   await Widget_Interaction.DroppableButton();
   await Widget_Interaction.DragAndDropCheck();
 });

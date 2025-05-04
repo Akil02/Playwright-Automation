@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test");
 
-var arr = ["Brinjal"];
+var arr = ["Brinjal", "Potato", "Cashews"];
 // "Potato", "Cashews"
 
 let Search = "Search for Vegetables and Fruits";
@@ -39,18 +39,15 @@ test("This is first script", async ({ page }) => {
   await page.getByText(CheckOut).click();
 
   await page.getByPlaceholder(EnterPromoCode).fill("A1234MN");
-  await page.getByText("Apply").click();
-  const v = await page.$$(PromoInformation).textContent();
+  await page.getByText(ApplyButton).click();
+  const v = await page.locator(PromoInformation).textContent();
   console.log(v);
   console.log(await page.getByText(PlaceOrder).isEnabled());
   console.log(await page.getByText(PlaceOrder).isVisible());
-  const button1 = await page.getByText(PlaceOrder);
-  await button1.evaluate((element) => element.click());
-  const dropdown = await page.$('select[fdprocessedid="yncr78"]');
-
-  // Select "India" from the dropdown by its value attribute
-  await dropdown.selectOption({ value: "India" });
+  await page.getByText(PlaceOrder).click();
+  await page.waitForTimeout(2000);
+  await page.selectOption("select", { label: "India" });
   await page.locator(AgreeCheckBox).click();
   await page.getByText(ProceedButton).click();
-  await page.waitForTimeout(8000);
+  await page.waitForTimeout(2000);
 });

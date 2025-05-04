@@ -1,0 +1,7 @@
+New Browser text message : This is a sample page
+Dialog message and type : You clicked a buttonand : alert
+Dialog message and type : This alert appeared after 5 secondsand : alert
+Dialog message and type : Do you confirm action?and : confirm
+Dialog message and type : Please enter your nameand : prompt
+This is for prompt
+This is a sample page

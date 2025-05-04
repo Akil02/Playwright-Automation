@@ -3,9 +3,10 @@ const ExcelJS = require("exceljs");
 class Excel {
   async ExcelData(SheetName) {
     const workbook = new ExcelJS.Workbook();
-    await workbook.xlsx.readFile(
-      "C:/Playwright_Automation1/PlaywrightExcel.xlsx"
-    );
+    const path = require("path");
+    console.log("Path ************************************* " + process.cwd());
+    const filePath = path.join(process.cwd(), "PlaywrightExcel.xlsx");
+    await workbook.xlsx.readFile(filePath);
     const worksheet = workbook.getWorksheet(SheetName);
     // Check if the worksheet exists
     if (!worksheet) {
