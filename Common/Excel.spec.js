@@ -4,7 +4,6 @@ class Excel {
   async ExcelData(SheetName) {
     const workbook = new ExcelJS.Workbook();
     const path = require("path");
-    console.log("Path ************************************* " + process.cwd());
     const filePath = path.join(process.cwd(), "PlaywrightExcel.xlsx");
     await workbook.xlsx.readFile(filePath);
     const worksheet = workbook.getWorksheet(SheetName);

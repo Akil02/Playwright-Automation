@@ -1,4 +1,5 @@
 const { test, expect } = require("@playwright/test");
+const path = require("path");
 const ExcelJS = require("exceljs");
 import Excel from "../Common/Excel.spec";
 const excel = new Excel();
@@ -203,9 +204,8 @@ class Elements {
 
   async UploadAndDownloadDocuments() {
     const fileInput = await this.page.locator(uploadfiles);
-    await fileInput.setInputFiles(
-      "C:/Users/A AKIL GANESH/Pictures/Screenshots/Screenshot 2024-01-13 225200.png"
-    );
+    const filePath = path.join(process.cwd(), "Screenshot.png");
+    await fileInput.setInputFiles(filePath);
     //download need to handle later
     const [download] = await Promise.all([
       this.page.waitForEvent("download"), // Wait for the download to start
